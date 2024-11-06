@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tedcarpi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 12:28:20 by tedcarpi          #+#    #+#             */
-/*   Updated: 2024/11/06 11:03:09 by tedcarpi         ###   ########.fr       */
+/*   Created: 2024/11/06 09:10:56 by tedcarpi          #+#    #+#             */
+/*   Updated: 2024/11/06 09:44:09 by tedcarpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, size_t size)
+int	ft_atoi(const char *str)
 {
-	size_t			i;
-	unsigned char	*ptrd;
-	unsigned char	*ptrs;
+	int	i;
+	int	res;
+	int	sign;
 
 	i = 0;
-	ptrd = (unsigned char *)dest;
-	ptrs = (unsigned char *)src;
-	if (dest < src)
+	res = 0;
+	sign = 1;
+	while (str[i] == 32 || str[i] >= 9 && str[i] <= 13)
+		i++;
+	if (str[i] == 43 || str[i] == 45)
 	{
-		while (i < size)
-		{
-			ptrd[i] = ptrs[i];
-			i++;
-		}
+		if (str[i] == 45)
+			sign = sign * -1;
+		i++;
 	}
-	else if (dest > src)
+	while (str[i] >= 48 && str[i] <= 57)
 	{
-		i = size - 1;
-		while (i > 0)
-		{
-			ptrd[i] = ptrs[i];
-			i--;
-		}
+		res = res * 10 + str[i] - 48;
+		i++;
 	}
-	return (dest);
+	return (res * sign);
 }

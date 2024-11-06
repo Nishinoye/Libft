@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tedcarpi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 12:28:20 by tedcarpi          #+#    #+#             */
-/*   Updated: 2024/11/06 11:03:09 by tedcarpi         ###   ########.fr       */
+/*   Created: 2024/11/06 08:48:05 by tedcarpi          #+#    #+#             */
+/*   Updated: 2024/11/06 08:58:07 by tedcarpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, size_t size)
+void	*ft_memchr(const void *block, int src, size_t size)
 {
 	size_t			i;
-	unsigned char	*ptrd;
-	unsigned char	*ptrs;
+	unsigned char	*ptrb;
+	unsigned char	c;
 
 	i = 0;
-	ptrd = (unsigned char *)dest;
-	ptrs = (unsigned char *)src;
-	if (dest < src)
+	ptrb = (unsigned char *)block;
+	c = (unsigned char)src;
+	while (i < size)
 	{
-		while (i < size)
-		{
-			ptrd[i] = ptrs[i];
-			i++;
-		}
+		if (ptrb[i] == c)
+			return ((void *)&ptrb[i]);
+		i++;
 	}
-	else if (dest > src)
-	{
-		i = size - 1;
-		while (i > 0)
-		{
-			ptrd[i] = ptrs[i];
-			i--;
-		}
-	}
-	return (dest);
+	return (NULL);
 }

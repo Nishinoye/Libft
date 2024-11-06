@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tedcarpi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 12:28:20 by tedcarpi          #+#    #+#             */
-/*   Updated: 2024/11/06 11:03:09 by tedcarpi         ###   ########.fr       */
+/*   Created: 2024/11/06 08:58:23 by tedcarpi          #+#    #+#             */
+/*   Updated: 2024/11/06 09:44:35 by tedcarpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, size_t size)
+int	memcmp(const void *pt1, const void *pt2, size_t size)
 {
 	size_t			i;
-	unsigned char	*ptrd;
-	unsigned char	*ptrs;
+	unsigned char	*s1;
+	unsigned char	*s2;
 
 	i = 0;
-	ptrd = (unsigned char *)dest;
-	ptrs = (unsigned char *)src;
-	if (dest < src)
-	{
-		while (i < size)
-		{
-			ptrd[i] = ptrs[i];
-			i++;
-		}
-	}
-	else if (dest > src)
-	{
-		i = size - 1;
-		while (i > 0)
-		{
-			ptrd[i] = ptrs[i];
-			i--;
-		}
-	}
-	return (dest);
+	s1 = (unsigned char *)pt1;
+	s2 = (unsigned char *)pt2;
+	while (i < size && s1[i] == s2[i])
+		i++;
+	return ((int)s1[i] - (int)s2[i]);
 }
