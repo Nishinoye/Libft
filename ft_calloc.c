@@ -6,11 +6,11 @@
 /*   By: tedcarpi <tedcarpi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:27:33 by tedcarpi          #+#    #+#             */
-/*   Updated: 2024/11/07 10:16:12 by tedcarpi         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:17:55 by tedcarpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t type)
 {
