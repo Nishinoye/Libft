@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tedcarpi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tedcarpi <tedcarpi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:20:30 by tedcarpi          #+#    #+#             */
-/*   Updated: 2024/11/05 15:24:31 by tedcarpi         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:00:18 by tedcarpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t size)
 {

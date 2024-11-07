@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tedcarpi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tedcarpi <tedcarpi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 08:48:05 by tedcarpi          #+#    #+#             */
-/*   Updated: 2024/11/06 08:58:07 by tedcarpi         ###   ########.fr       */
+/*   Updated: 2024/11/07 09:59:36 by tedcarpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *block, int src, size_t size)
 {
