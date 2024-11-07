@@ -6,7 +6,7 @@
 /*   By: tedcarpi <tedcarpi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 14:42:02 by tedcarpi          #+#    #+#             */
-/*   Updated: 2024/11/07 10:00:40 by tedcarpi         ###   ########.fr       */
+/*   Updated: 2024/11/07 13:12:16 by tedcarpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ char	*ft_strrchr(const char *str, int c)
 {
 	int	i;
 
-	i = 0;
-	while (str[i])
-		i++;
+	i = ft_strlen(str);
 	while (i >= 0)
 	{
 		if (str[i] == (char)c)
