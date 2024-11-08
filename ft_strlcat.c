@@ -6,19 +6,21 @@
 /*   By: tedcarpi <tedcarpi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:47:41 by tedcarpi          #+#    #+#             */
-/*   Updated: 2024/11/07 12:51:23 by tedcarpi         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:22:43 by tedcarpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
+	size_t	len;
 
 	j = ft_strlen(dest);
 	i = ft_strlen(src);
+	len = i + j;
 	if (j >= size)
 		return (size + i);
 	i = 0;
@@ -28,5 +30,5 @@ size_t	strlcat(char *dest, const char *src, size_t size)
 		i++;
 	}
 	dest[j + i] = '\0';
-	return (j + i);
+	return (len);
 }

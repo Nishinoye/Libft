@@ -6,7 +6,7 @@
 /*   By: tedcarpi <tedcarpi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 13:24:19 by tedcarpi          #+#    #+#             */
-/*   Updated: 2024/11/08 11:04:34 by tedcarpi         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:16:18 by tedcarpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,17 @@ int		ft_memcmp(const void *pt1, const void *pt2, size_t size);
 void	*ft_memcpy(void *dest, const void *src, size_t size);
 void	*ft_memmove(void *dest, const void *src, size_t size);
 void	*ft_memset(void *array, int value, size_t size);
+char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strdup(const char *src);
 char	*ft_strjoin(char const *s1, char const *s2);
-size_t	strlcat(char *dest, const char *src, size_t size);
+size_t	ft_strlcat(char *dest, const char *src, size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t size);
 char	*ft_strnstr(const char *s1, const char *s2, size_t size);
 char	*ft_strrchr(const char *str, int c);
+char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);

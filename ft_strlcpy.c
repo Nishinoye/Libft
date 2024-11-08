@@ -6,7 +6,7 @@
 /*   By: tedcarpi <tedcarpi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:39:59 by tedcarpi          #+#    #+#             */
-/*   Updated: 2024/11/07 10:00:09 by tedcarpi         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:33:29 by tedcarpi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 			dest[i] = src[i];
 			i++;
 		}
+		dest[i] = '\0';
 	}
-	dest[i] = '\0';
-	while (src[i])
-		i++;
-	return (i);
+	return (ft_strlen(src));
 }
